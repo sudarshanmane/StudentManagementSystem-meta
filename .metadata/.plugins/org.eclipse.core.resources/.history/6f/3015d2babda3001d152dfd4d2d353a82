@@ -1,0 +1,74 @@
+package com.student.model;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+
+@Entity
+public class Student {
+	
+	private Integer roll;
+	private String name;
+	
+	@Embedded
+	private StudentAddress address;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<InstituteCourses> courses = new LinkedList<>();
+	
+	public Integer getRoll() {
+		return roll;
+	}
+
+	public void setRoll(Integer roll) {
+		this.roll = roll;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public StudentAddress getAddress() {
+		return address;
+	}
+
+	public void setAddress(StudentAddress address) {
+		this.address = address;
+	}
+
+	public List<InstituteCourses> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(List<InstituteCourses> courses) {
+		this.courses = courses;
+	}	
+
+	public Student() {
+		super();
+	}
+
+	public Student(String name, StudentAddress address, List<InstituteCourses> courses) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.courses = courses;
+	}
+
+	public Student(Integer roll, String name, StudentAddress address, List<InstituteCourses> courses) {
+		super();
+		this.roll = roll;
+		this.name = name;
+		this.address = address;
+		this.courses = courses;
+	}
+	
+}

@@ -1,0 +1,30 @@
+package regular.expression;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {
+	
+		Scanner scanner = new Scanner(System.in);
+				
+		String dateToConvert  = "21/10/1999";
+		LocalDate dateTime = LocalDate.parse(dateToConvert,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+		
+//		to print the name of the day from the date :
+		Month  month = dateTime.getMonth();
+		System.out.println(month.toString().charAt(1));
+		
+		DayOfWeek dayOfWeek = dateTime.getDayOfWeek();
+
+		
+	}
+
+}

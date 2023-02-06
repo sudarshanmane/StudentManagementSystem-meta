@@ -1,0 +1,32 @@
+package regular.expression;
+
+public class InstituteAddress{
+	
+	private String insitute_city;
+	private String institute_state;
+	public String getInsitute_city() {
+		return insitute_city;
+	}
+	public void setInsitute_city(String insitute_city) {
+		this.insitute_city = insitute_city;
+	}
+	public String getInstitute_state() {
+		return institute_state;
+	}
+	public void setInstitute_state(String institute_state) {
+		this.institute_state = institute_state;
+	}
+	public InstituteAddress() {
+		super();
+	}
+	public InstituteAddress(String insitute_city, String institute_state) {
+		super();
+		this.insitute_city = insitute_city;
+		this.institute_state = institute_state;
+	}
+	
+	
+	
+	
+
+}

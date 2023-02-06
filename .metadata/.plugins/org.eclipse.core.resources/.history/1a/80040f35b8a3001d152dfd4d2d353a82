@@ -1,0 +1,20 @@
+package com.student.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.student.Exception.StudentCourseException;
+import com.student.dao.CourseDao;
+import com.student.model.InstituteCourses;
+
+public class CourseServiceImpl implements  CourseService{
+
+	@Autowired
+	private CourseDao courseDao;
+	
+	@Override
+	public String createNewCourse(InstituteCourses courses) throws StudentCourseException {
+		
+		return null;
+	}
+
+}

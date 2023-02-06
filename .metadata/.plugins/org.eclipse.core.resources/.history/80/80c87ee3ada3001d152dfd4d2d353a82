@@ -1,0 +1,5 @@
+package com.student.Exception;
+
+public class GlobalExceptionHandler {
+
+}

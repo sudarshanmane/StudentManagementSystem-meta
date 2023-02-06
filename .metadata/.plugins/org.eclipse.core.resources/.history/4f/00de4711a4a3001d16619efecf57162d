@@ -1,0 +1,27 @@
+package regular.expression;
+
+public class StudentAddress {
+	
+	private String student_city;
+	private String student_state;
+	public String getStudent_city() {
+		return student_city;
+	}
+	public void setStudent_city(String student_city) {
+		this.student_city = student_city;
+	}
+	public String getStudent_state() {
+		return student_state;
+	}
+	public void setStudent_state(String student_state) {
+		this.student_state = student_state;
+	}
+	public StudentAddress(String student_city, String student_state) {
+		super();
+		this.student_city = student_city;
+		this.student_state = student_state;
+	}
+	public StudentAddress() {
+		super();
+	}
+}

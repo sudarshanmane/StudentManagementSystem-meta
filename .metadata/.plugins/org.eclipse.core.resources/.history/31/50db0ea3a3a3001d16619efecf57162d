@@ -1,0 +1,26 @@
+package regular.expression;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {
+		
+		List<Student> list = new LinkedList<>();
+		list.add(new Student(1,"Ram",547));
+		list.add(new Student(2, "Mahesh", 684));
+		list.add(new Student(3, "Ganesh", 532));
+	
+		Collections.sort(list,(o1,o2) -> {
+			if(o1.getMarks()>o2.getMarks())
+				return +1;
+			else
+				return -1;
+		});
+		
+		System.out.println(list);
+	}
+
+}

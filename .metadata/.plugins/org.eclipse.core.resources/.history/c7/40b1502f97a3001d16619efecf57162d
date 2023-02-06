@@ -1,0 +1,23 @@
+package regular.expression;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.Year;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {
+	
+	int[]  arr = {1,5,20,10,52,40};
+	System.out.println(Arrays.sort(arr));
+
+		
+	}
+
+}

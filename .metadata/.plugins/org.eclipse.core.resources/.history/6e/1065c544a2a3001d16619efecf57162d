@@ -1,0 +1,35 @@
+package regular.expression;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.Year;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {
+		
+		List<Student> list = new LinkedList<>();
+		list.add(new Student(1,"Ram",547));
+		list.add(new Student(2, "Mahesh", 684));
+		list.add(new Student(3, "Ganesh", 532));
+	
+		Collections.sort(list,(o1,o2) -> {
+			if(o1.getMarks()>o2.getMarks())
+				return +1;
+			else
+				retrun -1;
+		
+		});
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.student.Exception;
+
+
+public class StudenytCourseException extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public StudenytCourseException() {
+		
+	}
+	
+	public StudenytCourseException(String message) {
+		super(message);
+	}
+	
+}

@@ -1,0 +1,94 @@
+package com.student.model;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class InstituteCourses {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer course_id;
+	private String course_name;
+	private String course_fee;
+	
+	@Embedded
+	private InstituteAddress address;
+	
+	private List<Student> students = new LinkedList<>();
+
+	public Integer getCourse_id() {
+		return course_id;
+	}
+
+	public void setCourse_id(Integer course_id) {
+		this.course_id = course_id;
+	}
+
+	public String getCourse_name() {
+		return course_name;
+	}
+
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
+	}
+
+	public String getCourse_fee() {
+		return course_fee;
+	}
+
+	public void setCourse_fee(String course_fee) {
+		this.course_fee = course_fee;
+	}
+
+	public InstituteAddress getAddress() {
+		return address;
+	}
+
+	public void setAddress(InstituteAddress address) {
+		this.address = address;
+	}
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+	public InstituteCourses(Integer course_id, String course_name, String course_fee, InstituteAddress address,
+			List<Student> students) {
+		super();
+		this.course_id = course_id;
+		this.course_name = course_name;
+		this.course_fee = course_fee;
+		this.address = address;
+		this.students = students;
+	}
+
+	public InstituteCourses(String course_name, String course_fee, InstituteAddress address, List<Student> students) {
+		super();
+		this.course_name = course_name;
+		this.course_fee = course_fee;
+		this.address = address;
+		this.students = students;
+	}
+
+	public InstituteCourses() {
+		super();
+	}
+	
+	
+	
+	
+	
+	
+
+}

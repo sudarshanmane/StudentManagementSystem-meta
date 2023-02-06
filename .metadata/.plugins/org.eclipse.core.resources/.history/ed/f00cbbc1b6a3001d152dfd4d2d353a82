@@ -1,0 +1,15 @@
+package com.student.service;
+
+import org.springframework.stereotype.Service;
+
+import com.student.Exception.StudentCourseException;
+import com.student.model.InstituteCourses;
+
+@Service
+public interface StudentService {
+	
+	public String createNewCourse(InstituteCourses  courses) throws StudentCourseException;
+	
+	
+
+}
